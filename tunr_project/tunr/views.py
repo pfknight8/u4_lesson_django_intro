@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import ArtistSerializer, SongSerializer
 from .models import Artist, Song
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class ArtistList(generics.ListCreateAPIView):
